@@ -1,4 +1,10 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Apply plugins with Kotlin DSL syntax
 plugins {
     alias(libs.plugins.android.application) apply false
+}
+
+buildscript {
+    dependencies {
+        classpath("com.google.gms:google-services:4.3.15")
+    }
 }

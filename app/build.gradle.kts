@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application") // Correct syntax in Kotlin DSL
+    id("com.google.gms.google-services") // Apply the Google services plugin correctly
 }
 
 android {
@@ -32,7 +33,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -40,4 +40,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Firebase dependencies
+    implementation("com.google.firebase:firebase-firestore:24.2.0")
+    implementation("com.google.firebase:firebase-auth:21.0.8")
 }
