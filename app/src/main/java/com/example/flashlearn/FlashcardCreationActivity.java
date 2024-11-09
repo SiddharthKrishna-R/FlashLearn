@@ -24,30 +24,23 @@ public class FlashcardCreationActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        // Save button click listener
         saveButton.setOnClickListener(v -> {
             String question = questionEditText.getText().toString().trim();
             String answer = answerEditText.getText().toString().trim();
 
-            // Check if the question and answer are not empty
+            // Check if both fields are filled
             if (question.isEmpty() || answer.isEmpty()) {
-                // Show a toast message to notify the user that both fields are required
                 Toast.makeText(FlashcardCreationActivity.this, "Please enter both question and answer.", Toast.LENGTH_SHORT).show();
             } else {
-                // Create a new Flashcard object
                 Flashcard flashcard = new Flashcard(question, answer);
 
-                // Add flashcard to Firestore
+                // Save the flashcard to Firestore
                 db.collection("flashcards").add(flashcard)
                         .addOnSuccessListener(documentReference -> {
-                            // Show a success message
                             Toast.makeText(FlashcardCreationActivity.this, "Flashcard added successfully!", Toast.LENGTH_SHORT).show();
-
-                            // Finish the activity and return to the home screen
-                            finish();
+                            finish();  // Close this activity and return to HomeScreenActivity
                         })
                         .addOnFailureListener(e -> {
-                            // Show an error message if the flashcard creation fails
                             Toast.makeText(FlashcardCreationActivity.this, "Error adding flashcard. Please try again.", Toast.LENGTH_SHORT).show();
                         });
             }

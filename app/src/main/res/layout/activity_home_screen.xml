@@ -8,7 +8,16 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/fab_add" />
+        android:layout_above="@id/btn_view_flashcard"/>
+
+    <Button
+        android:id="@+id/btn_view_flashcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Flashcard"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
