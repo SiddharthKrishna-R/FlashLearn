@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "359946513034",
+    "project_id": "flashlearn-82849",
+    "storage_bucket": "flashlearn-82849.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359946513034:android:7556e6e925137d734d1b73",
+        "android_client_info": {
+          "package_name": "com.example.flashlearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAAZoT4yepbWuP9RsIebLA5FuoQpbagzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
